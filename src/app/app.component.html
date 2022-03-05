@@ -1,0 +1,48 @@
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <header>
+    <div>
+      <h1>CADASTRO DE JOGOS <i class="fa-solid fa-gamepad"></i></h1>
+    </div>
+    <div>
+      <a href="https://github.com/Doglaum" target="_blank">
+        <i class="fa-brands fa-deploydog"><b>DouglasMartins</b></i>
+      </a>
+    </div>
+  </header>
+  <div id="conteudo">
+    <div class="lineInput">
+      <p>Nome do <b>jogo:</b></p>
+      <input [(ngModel)]="jogoNOME" type="text" />
+    </div>
+    <div class="lineInput">
+      <p>Capa do jogo <b>(Formato URL):</b></p>
+      <input [(ngModel)]="jogoURL" type="text" />
+    </div>
+    <div class="lineInputPreco">
+      <p><b>Preço:</b></p>
+      <span><b>R$</b><input [(ngModel)]="jogoPRECO" type="number" /></span>
+    </div>
+    <button (click)="salvarJogo()">
+      Salvar Jogo <i class="fa-solid fa-floppy-disk"></i>
+    </button>
+    <div id="conteudoJogos">
+      <div *ngFor="let jogo of jogos" id="">
+        <div class="jogosSalvos">
+          <b>{{ jogo.nome }}</b>
+          <img src="{{ jogo.url }}"
+            onerror="this.src='https://user-images.githubusercontent.com/24848110/33519396-7e56363c-d79d-11e7-969b-09782f5ccbab.png'"
+            alt="" />
+          <b>R$ {{ jogo.preco }}</b>
+          <div (click)="deletar(jogo.nome)">
+            <i class="fa-solid fa-trash"></i>DELETAR
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="app.component.ts"></script>
