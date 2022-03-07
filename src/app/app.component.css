@@ -1,162 +1,158 @@
+header {
+  background-color: black;
+  color: #ff5b50;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  padding-left: 280px;
+  padding-right: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-body {
-    background-color: #252525;
-    margin: 0;
-  }
-  header {
-    background-color: black;
-    color: #ff5b50;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    padding-left: 50px;
-    padding-right: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .fa-brands b{
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 100;
-  }
-  div a{
-    text-decoration: none;
-    color: #ff5b50;
-  }
-  
-  #conteudo {
-    color: white;
-    background-color: #252525;
-    padding: 15px;
-    padding-left: 50px;
-    font-family: Montserrat;
-    font-size: 18px;
-  }
-  
-  #conteudo button {
-    margin-top: 50px;
-    border: 0;
-    padding: 20px;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 22px;
-    transition: all ease 0.5s;
-    margin-bottom: 40px;
-  }
-  
-  #conteudo button:hover {
-    background-color: #ff5b50;
-    color: white;
-  }
-  
-  input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    outline: 0;
-  }
-  
-  .lineInput input {
-    border-radius: 0;
-    width: 600px;
-    border: 0;
-    font-family: Montserrat;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 22px;
-    margin-bottom: 10px;
-  }
-  
-  .lineInput input:focus, .lineInputPreco span input:focus {
-    background-color: #ff5b50;
-    transition: all ease 0.2s;
-  }
-  
-  .lineInputPreco {
-    display: flex;
-    flex-direction: column;
-    color: white;
-  }
-  
-  .lineInputPreco span {
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .lineInputPreco span input {
-    margin: 0;
-    border: 0;
-    border-radius: 0;
-    width: 520px;
-    font-family: Montserrat;
-    font-weight: 700;
-    font-size: 18px;
-  }
-  
-  .lineInputPreco span b {
-    background-color: #533937;
-    color: #ff5b50;
-    width: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  #conteudoJogos {
-    display: flex;
-    flex-direction: row;
-    gap: 60px;
-    flex-wrap: wrap;
-    margin-top: 30px;
-    align-items: center;
-    background-color: #252525;
-  }
-  
-  .jogosSalvos {
-    border: solid 2px rgba(0, 0, 0, 0);
-    padding: 10px;
-    color: #ff5b50;
-    font-family: Montserrat;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 22px;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 10px;
-    margin-bottom: 20px;
-    transition: all ease 0.5s;
-    width: 200px;
-  }
-  
-  .jogosSalvos img{
-    min-height: 230px;
-    max-height: 230px;
-    max-width: 200px;
-  }
-  
-  .jogosSalvos:hover {
-    border: solid 2px #ff5b50;
-    border-radius: 4px;
-  }
-  
-  .jogosSalvos div {
-    color: #795547;
-    font-family: Montserrat;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 18px;
-    transition: all ease 0.5s;
-  }
-  
-  .jogosSalvos div:hover {
-    color: #ff5b50;
-    cursor: pointer;
-  }
- 
+.fa-brands b {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 100;
+}
+
+div a {
+  text-decoration: none;
+  color: #ff5b50;
+}
+
+#conteudo {
+  color: white;
+  background-color: #252525;
+  padding: 15px;
+  padding-left: 280px;
+  font-family: Montserrat;
+  font-size: 18px;
+  border-bottom: solid 2px black;
+}
+
+#conteudo button {
+  margin-top: 50px;
+  border: 0;
+  padding: 20px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  transition: all ease 0.5s;
+  margin-bottom: 40px;
+}
+
+#conteudo button:hover {
+  background-color: #ff5b50;
+  color: white;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  outline: 0;
+}
+
+.lineInput input {
+  border-radius: 0;
+  width: 600px;
+  border: 0;
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 10px;
+}
+
+.lineInput input:focus, .lineInputPreco span input:focus {
+  background-color: #ff5b50;
+  transition: all ease 0.2s;
+}
+
+.lineInputPreco {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.lineInputPreco span {
+  display: flex;
+  flex-direction: row;
+}
+
+.lineInputPreco span input {
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  width: 520px;
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.lineInputPreco span b {
+  background-color: #533937;
+  color: #ff5b50;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#conteudoJogos {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  align-items: center;
+  background-color: #252525;
+}
+
+.jogosSalvos {
+  border: solid 2px rgba(0, 0, 0, 0);
+  padding: 10px;
+  color: #ff5b50;
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 20px;
+  transition: all ease 0.5s;
+  width: 200px;
+}
+
+.jogosSalvos img {
+  min-height: 230px;
+  max-height: 230px;
+  max-width: 200px;
+}
+
+.jogosSalvos:hover {
+  border: solid 2px #ff5b50;
+  border-radius: 4px;
+}
+
+.jogosSalvos div {
+  color: #795547;
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  transition: all ease 0.5s;
+}
+
+.jogosSalvos div:hover {
+  color: #ff5b50;
+  cursor: pointer;
+}

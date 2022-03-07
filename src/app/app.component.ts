@@ -1,5 +1,6 @@
 
 import { Component, OnInit } from '@angular/core';
+import { AlertService } from './service/alert.service';
 
 @Component({
   selector: 'my-app',
@@ -7,32 +8,31 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
+
+  constructor(public alertService: AlertService) { }
   jogos: Array<any> = [];
-  jogoPRECO: undefined; 
+  jogoPRECO: undefined;
   jogoNOME: undefined;
   jogoURL: undefined;
   valida: Boolean = true;
-  ngOnInit() {}
+  ngOnInit() { }
 
   salvarJogo() {
     let jogoObjeto: any = {};
     jogoObjeto.nome = this.jogoNOME;
     jogoObjeto.preco = this.jogoPRECO;
     jogoObjeto.url = this.jogoURL;
-    this.validarCampos(this.jogoNOME, this.jogoPRECO, this.jogoURL);
-    if (this.valida == false) {
-      this.valida = true;
+    if (this.validarCampos(this.jogoNOME, this.jogoPRECO, this.jogoURL) == false) {
       return;
     } else {
       for (let i = 0; i < this.jogos.length; i++) {
         if (this.jogoNOME == this.jogos[i].nome) {
-          alert('Jogo já cadastrado');
+          this.alertService.error()
           this.limpar();
           return;
         }
       }
     }
-
     this.jogos.push(jogoObjeto);
     this.limpar();
   }
@@ -42,23 +42,15 @@ export class AppComponent implements OnInit {
     this.jogoPRECO = undefined;
     this.jogoURL = undefined;
   }
-  
+
   deletar(jogo:any) {
-    for (let i = 0; i < this.jogos.length; i++) {
-      if (this.jogos[i].nome == jogo) {
-        let confimar = confirm(`Você tem certeza que deseja deletar ${jogo}?`);
-        if (confimar == true) {
-          this.jogos.splice(i, 1);
-          this.limpar();
-        }
-      }
-    }
+    this.jogos = this.alertService.confirm(jogo, this.jogos)
   }
-  
-  validarCampos(nome:any, preco:any, url:any) {
+
+  validarCampos(nome: any, preco: any, url: any) {
     if (nome == undefined || preco == undefined || url == undefined) {
-      alert('Por favor preencha todos os dados.');
-      return (this.valida = false);
-    } return
+      this.alertService.dadosVerificador()
+      return false;
+    } return true
   }
 }
